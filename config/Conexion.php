@@ -10,9 +10,7 @@ try {
         $usuario_bd,
         $clave_bd,
         [
-            // que PDO tire excepciones si hay un error de SQL
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            // que los resultados vengan como arrays asociativos
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ]
     );

@@ -1,6 +1,6 @@
 -- Base de datos de CinePlus --
 
-CREATE DATABASE IF NOT EXISTS cineplus;--
+CREATE DATABASE IF NOT EXISTS cineplus;
 USE cineplus;
 
 CREATE TABLE genero (
