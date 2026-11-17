@@ -1,4 +1,5 @@
 # CinePlus
+### AUN EN MODIFICACIONES TODA LA PÁGINA Y TODOS LOS CÓDIGOS - NO ES EL PROYECTO FINAL
 
 ## Descripción
 Sitio web de películas y series. Permite registrarse, iniciar sesión y ver el catálogo
