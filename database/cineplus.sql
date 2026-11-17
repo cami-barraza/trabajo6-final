@@ -1,7 +1,7 @@
 -- Base de datos de CinePlus --
 
-CREATE DATABASE IF NOT EXISTS cineplus;
-USE cineplus;
+--CREATE DATABASE IF NOT EXISTS cineplus;--
+--USE cineplus;--
 
 CREATE TABLE genero (
     gen_ID INT AUTO_INCREMENT,
