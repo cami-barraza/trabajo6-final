@@ -2,7 +2,7 @@
 ?>
 <header class="cabecera">
     <a class="logo" href="index.php">
-    <img src="img/logo1.png" alt="Logo de CinePlus"></a>
+    <img src="img/logo2.png" alt="Logo de CinePlus"></a>
     <nav>
         <a href="index.php">Inicio</a>
         <a href="datos.php">Datos de la base</a>
