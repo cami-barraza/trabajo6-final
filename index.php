@@ -2,6 +2,12 @@
 session_start();
 require_once __DIR__ . "/config/Conexion.php";
 
+// si no inició sesión, lo mando al login
+if (!isset($_SESSION["usuario_id"])) {
+    header("Location: iniciar.php");
+    exit;
+}
+
 // mensaje (se muestra una sola vez)
 $mensaje = "";
 if (isset($_SESSION["mensaje"])) {
