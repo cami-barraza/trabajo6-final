@@ -2,8 +2,12 @@
 session_start();
 require_once __DIR__ . "/config/Conexion.php";
 
-// Muestra el resultado de una consulta como tabla.
-// Las consultas de esta página son fijas (no dependen de lo que escriba el usuario).
+// solo el admin puede ver esta página
+if (!isset($_SESSION["rol"]) || $_SESSION["rol"] !== "admin") {
+    header("Location: index.php");
+    exit;
+}
+
 function mostrarTabla($conexion, $titulo, $sql) {
     echo "<h2>" . $titulo . "</h2>";
 
