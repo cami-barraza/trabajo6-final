@@ -2,7 +2,7 @@
 ?>
 <header class="cabecera">
     <a class="logo" href="index.php">
-    <img src="img/logo2.png" alt="Logo de CinePlus"></a>
+    <img src="img/logo1.jpg" alt="Logo de CinePlus"></a>
     <nav>
         <?php if (isset($_SESSION["usuario_id"])) { ?>
         <a href="index.php">Inicio</a>

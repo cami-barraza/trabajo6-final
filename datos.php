@@ -53,8 +53,8 @@ function mostrarTabla($conexion, $titulo, $sql) {
     <main>
         <h1>Datos de la base de datos</h1>
         <p class="intro">
-            Acá se ven las tablas de la base <strong>cineplus</strong> con los datos cargados.
-            La tabla de usuarios no se muestra porque tiene las contraseñas (aunque estén cifradas).
+          Acá se ven las tablas de la base <strong>cineplus</strong> con los datos cargados.
+          De los usuarios no se muestra la contraseña.
         </p>
 
         <?php
