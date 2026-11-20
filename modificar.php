@@ -7,7 +7,7 @@ require_once __DIR__ . "/includes/contenido_funciones.php";
 // solo el admin puede modificar
 requiereAdmin();
 
-// el id viene por la URL (modificar.php?id=3)
+
 $id = $_GET["id"] ?? "";
 if (!is_string($id) || !ctype_digit($id)) {
     $_SESSION["error"] = "El identificador no es válido.";
@@ -15,7 +15,7 @@ if (!is_string($id) || !ctype_digit($id)) {
     exit;
 }
 
-// busco el contenido con sus datos de película o serie
+
 $sql = "SELECT c.*, p.peli_Duracion, s.serie_Temporadas, s.serie_EpisodiosTot, s.serie_DuracionProm
         FROM contenido c
         LEFT JOIN pelicula p ON p.peli_ID = c.cont_ID
@@ -33,7 +33,7 @@ if (!$c) {
 
 $generos = $conexion->query("SELECT gen_ID, gen_Nombre FROM genero ORDER BY gen_Nombre")->fetchAll();
 
-// los datos que ya tenía, para mostrarlos en el formulario
+
 $modo = "modificar";
 $errores = [];
 $tipo = $c["cont_Tipo"];   // el tipo no se puede cambiar

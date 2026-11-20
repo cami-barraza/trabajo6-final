@@ -6,7 +6,7 @@ require_once __DIR__ . "/includes/auth.php";
 // solo el admin puede eliminar
 requiereAdmin();
 
-// la baja solo se acepta por POST (desde el botón del listado)
+
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("Location: admin_contenido.php");
     exit;
@@ -22,7 +22,7 @@ if (!is_string($id) || !ctype_digit($id)) {
 try {
     $conexion->beginTransaction();
 
-    // primero se borra lo que depende del contenido (por las claves foráneas)
+   
     $stmt = $conexion->prepare("DELETE FROM contenido_genero WHERE cont_ID = :id");
     $stmt->execute([":id" => $id]);
 
@@ -35,7 +35,7 @@ try {
     $stmt = $conexion->prepare("DELETE FROM serie WHERE serie_ID = :id");
     $stmt->execute([":id" => $id]);
 
-    // y al final el contenido
+
     $stmt = $conexion->prepare("DELETE FROM contenido WHERE cont_ID = :id");
     $stmt->execute([":id" => $id]);
     $filas = $stmt->rowCount();
