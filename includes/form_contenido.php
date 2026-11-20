@@ -1,8 +1,4 @@
 <?php
-// Formulario que usan alta.php y modificar.php.
-// Necesita estas variables: $modo, $tipo, $titulo, $anio, $sinopsis, $duracion,
-// $temporadas, $episodios, $duracionProm, $generos, $generosElegidos
-// (y $id cuando es modificar).
 
 if ($modo === "alta") {
     $destino = "alta.php";
