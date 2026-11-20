@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 ?>
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -86,39 +86,42 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
     <?php include __DIR__ . "/includes/nav.php"; ?>
 
-    <main>
-        <h1>Crear cuenta</h1>
+    <div class="auth-contenedor">
+        <main class="auth-formulario">
+            <h1>Crear cuenta</h1>
 
-        <?php if (!empty($errores)) { ?>
-            <div class="errores">
-                <ul>
-                    <?php foreach ($errores as $error) { ?>
-                        <li><?php echo htmlspecialchars($error); ?></li>
-                    <?php } ?>
-                </ul>
-            </div>
-        <?php } ?>
+            <?php if (!empty($errores)) { ?>
+                <div class="errores">
+                    <ul>
+                        <?php foreach ($errores as $error) { ?>
+                            <li><?php echo htmlspecialchars($error); ?></li>
+                        <?php } ?>
+                    </ul>
+                </div>
+            <?php } ?>
 
-        <form class="formulario" action="registro.php" method="POST">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($nombre); ?>" required>
+            <form class="formulario" action="registro.php" method="POST">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($nombre); ?>" required>
 
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" name="apellido" value="<?php echo htmlspecialchars($apellido); ?>" required>
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" value="<?php echo htmlspecialchars($apellido); ?>" required>
 
-            <label for="correo">Correo electrónico</label>
-            <input type="email" id="correo" name="correo" value="<?php echo htmlspecialchars($correo); ?>" required>
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" value="<?php echo htmlspecialchars($correo); ?>" required>
 
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password" required>
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
 
-            <label for="password2">Repetir contraseña</label>
-            <input type="password" id="password2" name="password2" required>
+                <label for="password2">Repetir contraseña</label>
+                <input type="password" id="password2" name="password2" required>
 
-            <button type="submit">Registrarme</button>
-        </form>
+                <button type="submit">Registrarme</button>
+            </form>
 
-        <p>¿Ya tenés cuenta? <a href="iniciar.php">Iniciá sesión</a></p>
-    </main>
+            <p>¿Ya tenés cuenta? <a href="iniciar.php">Iniciá sesión</a></p>
+        </main>
+        <div class="auth-imagen"></div>
+    </div>
 </body>
 </html>

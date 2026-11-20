@@ -2,8 +2,6 @@
 session_start();
 require_once __DIR__ . "/config/Conexion.php";
 
-session_start();
-
 // si ya está logueado lo mando al inicio
 if (isset($_SESSION["usuario_id"])) {
     header("Location: index.php");
@@ -62,28 +60,31 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
     <?php include __DIR__ . "/includes/nav.php"; ?>
 
-    <main>
-        <h1>Iniciar sesión</h1>
+    <div class="auth-contenedor">
+        <main class="auth-formulario">
+            <h1>Iniciar sesión</h1>
 
-        <?php if ($mensaje !== "") { ?>
-            <p class="aviso"><?php echo htmlspecialchars($mensaje); ?></p>
-        <?php } ?>
+            <?php if ($mensaje !== "") { ?>
+                <p class="aviso"><?php echo htmlspecialchars($mensaje); ?></p>
+            <?php } ?>
 
-        <?php if ($error !== "") { ?>
-            <div class="errores"><?php echo htmlspecialchars($error); ?></div>
-        <?php } ?>
+            <?php if ($error !== "") { ?>
+                <div class="errores"><?php echo htmlspecialchars($error); ?></div>
+            <?php } ?>
 
-        <form class="formulario" action="iniciar.php" method="POST">
-            <label for="correo">Correo electrónico</label>
-            <input type="email" id="correo" name="correo" value="<?php echo htmlspecialchars($correo); ?>" required>
+            <form class="formulario" action="iniciar.php" method="POST">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" value="<?php echo htmlspecialchars($correo); ?>" required>
 
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password" required>
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
 
-            <button type="submit">Entrar</button>
-        </form>
+                <button type="submit">Entrar</button>
+            </form>
 
-        <p>¿No tenés cuenta? <a href="registro.php">Registrate</a></p>
-    </main>
+            <p>¿No tenés cuenta? <a href="registro.php">Registrate</a></p>
+        </main>
+        <div class="auth-imagen"></div>
+    </div>
 </body>
 </html>
