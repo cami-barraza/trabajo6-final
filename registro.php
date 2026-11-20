@@ -121,7 +121,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             <p>¿Ya tenés cuenta? <a href="iniciar.php">Iniciá sesión</a></p>
         </main>
-        <div class="auth-imagen"></div>
+        <div class="auth-imagen auth-imagen-registro"></div>
     </div>
 </body>
 </html>

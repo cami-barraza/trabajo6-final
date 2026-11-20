@@ -249,10 +249,18 @@ th {
 
 .auth-imagen {
     flex: 1;
-    background-image: linear-gradient(to right, #14181c, rgba(20, 24, 28, 0.2)),
-                      url("../img/fondo1.jpg");
     background-size: cover;
     background-position: center;
+}
+
+.auth-imagen-login {
+    background-image: linear-gradient(to right, #14181c, rgba(20, 24, 28, 0.2)),
+                      url("../img/fondo1.jpg");
+}
+
+.auth-imagen-registro {
+    background-image: linear-gradient(to right, #14181c, rgba(20, 24, 28, 0.2)),
+                      url("../img/fondo2.jpg");
 }
 
 /* en el celular se esconde la foto */

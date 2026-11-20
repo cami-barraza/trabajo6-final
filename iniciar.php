@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             <p>¿No tenés cuenta? <a href="registro.php">Registrate</a></p>
         </main>
-        <div class="auth-imagen"></div>
+        <div class="auth-imagen auth-imagen-login"></div>
     </div>
 </body>
 </html>
