@@ -24,7 +24,6 @@ function mostrarTabla($conexion, $titulo, $sql) {
     }
 
     echo "<div class='tabla-scroll'><table><tr>";
-    // los nombres de las columnas salen de la primera fila
     foreach (array_keys($filas[0]) as $columna) {
         echo "<th>" . htmlspecialchars($columna) . "</th>";
     }
@@ -59,6 +58,7 @@ function mostrarTabla($conexion, $titulo, $sql) {
         </p>
 
         <?php
+        mostrarTabla($conexion, "usuario", "SELECT usu_ID, usu_Nombre, usu_Apellido, usu_Correo, usu_Rol FROM usuario ORDER BY usu_ID DESC");
         mostrarTabla($conexion, "genero", "SELECT * FROM genero");
         mostrarTabla($conexion, "contenido", "SELECT * FROM contenido");
         mostrarTabla($conexion, "pelicula", "SELECT * FROM pelicula");
